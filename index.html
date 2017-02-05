@@ -37,11 +37,23 @@
    &nbsp;
 </div>
 <div>
-  <audio autoplay loop controls>
+  <audio autoplay loop id="myAudio">
  <source src="SwitchMusic.mp3"
          type='audio/mpeg'>
  Your user agent does not support the HTML5 Audio element.
 </audio>
+<button type="button" onclick="aud_play_pause()">Play/Pause</button>
+
+<script>
+function aud_play_pause() {
+  var myAudio = document.getElementById("myAudio");
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
+  }
+}
+</script>
 </div>
     <script src="js/index.js"></script>
 
